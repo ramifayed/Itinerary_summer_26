@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ae084a2a0e29b0aae954f59da8bf9718 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-ant-path@1.1.2/dist/leaflet-ant-path.min.js"></script>
+</head>
+<body>
+    
+    
+<div style="position: fixed; bottom: 30px; left: 30px; width: 330px; z-index:9999; background:white; padding:12px; border:2px solid #777; border-radius:8px; font-size:13px;">
+<b>Itinéraire 17 juillet → 15 août</b><br>
+Jours effectifs: Corse 4 • Sardaigne 7 • Sicile 7 • Malte 7<br>
+Jours transport inter-destinations: 17/07, 22/07, 30/07, 07/08, 15/08<br>
+Cliquer sur les marqueurs pour les détails.
+</div>
+    
+            <div class="folium-map" id="map_ae084a2a0e29b0aae954f59da8bf9718" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ae084a2a0e29b0aae954f59da8bf9718 = L.map(
+                "map_ae084a2a0e29b0aae954f59da8bf9718",
+                {
+                    center: [40.5, 10.5],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 5,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_49db30cf65a9a0d9c6b75a5bd4eef679 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_49db30cf65a9a0d9c6b75a5bd4eef679.addTo(map_ae084a2a0e29b0aae954f59da8bf9718);
+        
+    
+            L.control.fullscreen(
+                {
+  "position": "topleft",
+  "title": "Full Screen",
+  "titleCancel": "Exit Full Screen",
+  "forceSeparateButton": false,
+}
+            ).addTo(map_ae084a2a0e29b0aae954f59da8bf9718);
+        
+    
+            var marker_7daa791a9e6e4a9ce94d883c3192bc27 = L.marker(
+                [48.8443, 2.373],
+                {
+}
+            ).addTo(map_ae084a2a0e29b0aae954f59da8bf9718);
+        
+    
+            var icon_51e3011b5c659ff3ef73a2b15a35b101 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dc82557ab97b9c865a2a7470da3756f9 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_61e62fb87ee4c5fafc933c0a1990ba8b = $(`<div id="html_61e62fb87ee4c5fafc933c0a1990ba8b" style="width: 100.0%; height: 100.0%;"><b>Paris Gare de Lyon</b><br><b>Rôle:</b> Départ<br><b>Date:</b> 17/07<br><b>Détails:</b> Départ en TGV vers Marseille Saint-Charles. Transport: train ~3h05–3h55.</div>`)[0];
+                popup_dc82557ab97b9c865a2a7470da3756f9.setContent(html_61e62fb87ee4c5fafc933c0a1990ba8b);
+            
+        
+
+        marker_7daa791a9e6e4a9ce94d883c3192bc27.bindPopup(popup_dc82557ab97b9c865a2a7470da3756f9)
+        ;
+
+        
+    
+    
+            marker_7daa791a9e6e4a9ce94d883c3192bc27.bindTooltip(
+                `<div>
+                     17/07 – Paris Gare de Lyon
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7daa791a9e6e4a9ce94d883c3192bc27.setIcon(icon_51e3011b5c659ff3ef73a2b15a35b101);
+            
+    
+            var marker_1b354ed1ba34d261f49f7f08239e8011 = L.marker(
+                [43.2965, 5.3698],
+                {
+}
+            ).addTo(map_ae084a2a0e29b0aae954f59da8bf9718);
+        
+    
+            var icon_22207de6839d754b3831a6063de84c13 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dc18b76a23b509b51628079c8d4cd04c = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_af74793fcd292da0e330e312ad5cd283 = $(`<div id="html_af74793fcd292da0e330e312ad5cd283" style="width: 100.0%; height: 100.0%;"><b>Marseille Saint-Charles / Vieux-Port</b><br><b>Rôle:</b> Transit<br><b>Date:</b> 17/07<br><b>Détails:</b> Arrivée TGV. Rejoindre le port de Marseille. Pas de nuit d'hôtel prévue si ferry le soir.</div>`)[0];
+                popup_dc18b76a23b509b51628079c8d4cd04c.setContent(html_af74793fcd292da0e330e312ad5cd283);
+            
+        
+
+        marker_1b354ed1ba34d261f49f7f08239e8011.bindPopup(popup_dc18b76a23b509b51628079c8d4cd04c)
+        ;
+
+        
+    
+    
+            marker_1b354ed1ba34d261f49f7f08239e8011.bindTooltip(
+                `<div>
+                     17/07 – Marseille Saint-Charles / Vieux-Port
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1b354ed1ba34d261f49f7f08239e8011.setIcon(icon_22207de6839d754b3831a6063de84c13);
+            
+    
+            var marker_d45988ff19fff8ad011f3928335563ea = L.marker(
+                [43.3428, 5.3363],
+                {
+}
+            ).addTo(map_ae084a2a0e29b0aae954f59da8bf9718);
+        
+    
+            var icon_8e0ea1cc9f8d58f0d2f32cb9611b9ef0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkblue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_209a946039141b516e7abcfb17c0dbb9 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_5a2cad750d59eeaee75636ebe0e9127a = $(`<div id="html_5a2cad750d59eeaee75636ebe0e9127a" style="width: 100.0%; height: 100.0%;"><b>Port de Marseille</b><br><b>Rôle:</b> Départ ferry<br><b>Date:</b> 17/07 soir<br><b>Détails:</b> Ferry de nuit Marseille → Ajaccio, cabine recommandée. Durée env. 12h.</div>`)[0];
+                popup_209a946039141b516e7abcfb17c0dbb9.setContent(html_5a2cad750d59eeaee75636ebe0e9127a);
+            
+        
+
+        marker_d45988ff19fff8ad011f3928335563ea.bindPopup(popup_209a946039141b516e7abcfb17c0dbb9)
+        ;
+
+        
+    
+    
+            marker_d45988ff19fff8ad011f3928335563ea.bindTooltip(
+                `<div>
+                     17/07 soir – Port de Marseille
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d45988ff19fff8ad011f3928335563ea.setIcon(icon_8e0ea1cc9f8d58f0d2f32cb9611b9ef0);
+            
+    
+            var marker_52ff0da83779b149c63021cccdeab84a = L.marker(
+                [41.9189, 8.7386],
+                {
+}
+            ).addTo(map_ae084a2a0e29b0aae954f59da8bf9718);
+        
+    
+            var icon_b56bf72fa9db6bd16f8f651941c0d04a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3caa8fe123235cf42b875539e90ddea6 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_120a5545a921b35f03abcc6ff1e8b3f5 = $(`<div id="html_120a5545a921b35f03abcc6ff1e8b3f5" style="width: 100.0%; height: 100.0%;"><b>Ajaccio port</b><br><b>Rôle:</b> Arrivée Corse<br><b>Date:</b> 18/07 matin<br><b>Détails:</b> Arrivée ferry. Prise de voiture. Route vers Porto-Vecchio env. 2h45–3h15.</div>`)[0];
+                popup_3caa8fe123235cf42b875539e90ddea6.setContent(html_120a5545a921b35f03abcc6ff1e8b3f5);
+            
+        
+
+        marker_52ff0da83779b149c63021cccdeab84a.bindPopup(popup_3caa8fe123235cf42b875539e90ddea6)
+        ;
+
+        
+    
+    
+            marker_52ff0da83779b149c63021cccdeab84a.bindTooltip(
+                `<div>
+                     18/07 matin – Ajaccio port
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_52ff0da83779b149c63021cccdeab84a.setIcon(icon_b56bf72fa9db6bd16f8f651941c0d04a);
+            
+    
+            var marker_0b189c5cf1885b6bca261f82fb24459c = L.marker(
+                [41.5914, 9.2795],
+                {
+}
+            ).addTo(map_ae084a2a0e29b0aae954f59da8bf9718);
+        
+    
+            var icon_e9ec8aad64b8709f0a767c230fccf98e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_eb3708ddabfc1185fdf2c7d3215aeb31 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_dce9ce198427654de7912e9c154ed3d1 = $(`<div id="html_dce9ce198427654de7912e9c154ed3d1" style="width: 100.0%; height: 100.0%;"><b>Porto-Vecchio</b><br><b>Rôle:</b> Hébergement Corse<br><b>Date:</b> 18–21/07<br><b>Détails:</b> 4 jours effectifs en Corse. Base unique: Porto-Vecchio. Plages: Palombaggia, Santa Giulia, Rondinara; accès Bonifacio.</div>`)[0];
+                popup_eb3708ddabfc1185fdf2c7d3215aeb31.setContent(html_dce9ce198427654de7912e9c154ed3d1);
+            
+        
+
+        marker_0b189c5cf1885b6bca261f82fb24459c.bindPopup(popup_eb3708ddabfc1185fdf2c7d3215aeb31)
+        ;
+
+        
+    
+    
+            marker_0b189c5cf1885b6bca261f82fb24459c.bindTooltip(
+                `<div>
+                     18–21/07 – Porto-Vecchio
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0b189c5cf1885b6bca261f82fb24459c.setIcon(icon_e9ec8aad64b8709f0a767c230fccf98e);
+            
+    
+            var marker_1d59f5e0fff696f14b8e5772e81f7ea0 = L.marker(
+                [41.3865, 9.1595],
+                {
+}
+            ).addTo(map_ae084a2a0e29b0aae954f59da8bf9718);
+        
+    
+            var icon_2330b0e29f5b3396f64e2585286e5735 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_69bc73f41ead96e9c0a5c7b826d36512 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_563b901aee32116351b9567dec5b0f84 = $(`<div id="html_563b901aee32116351b9567dec5b0f84" style="width: 100.0%; height: 100.0%;"><b>Bonifacio port</b><br><b>Rôle:</b> Départ Corse<br><b>Date:</b> 22/07<br><b>Détails:</b> Transport Corse → Sardaigne. Rendre ou garder voiture selon contrat. Ferry Bonifacio → Santa Teresa, env. 50 min.</div>`)[0];
+                popup_69bc73f41ead96e9c0a5c7b826d36512.setContent(html_563b901aee32116351b9567dec5b0f84);
+            
+        
+
+        marker_1d59f5e0fff696f14b8e5772e81f7ea0.bindPopup(popup_69bc73f41ead96e9c0a5c7b826d36512)
+        ;
+
+        
+    
+    
+            marker_1d59f5e0fff696f14b8e5772e81f7ea0.bindTooltip(
+                `<div>
+                     22/07 – Bonifacio port
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1d59f5e0fff696f14b8e5772e81f7ea0.setIcon(icon_2330b0e29f5b3396f64e2585286e5735);
+            
+    
+            var marker_bb89fb096d6cf0bcf6fb657e11bd75ae = L.marker(
+                [41.242, 9.1887],
+                {
+}
+            ).addTo(map_ae084a2a0e29b0aae954f59da8bf9718);
+        
+    
+            var icon_3cf6f3cb160756761cc3c2f5b0c1cb67 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0dadbc458ef5c8c2abea93fc038d0be1 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_6b393e4789ff0c31d7af548a5014eb1e = $(`<div id="html_6b393e4789ff0c31d7af548a5014eb1e" style="width: 100.0%; height: 100.0%;"><b>Santa Teresa Gallura</b><br><b>Rôle:</b> Arrivée Sardaigne<br><b>Date:</b> 22/07<br><b>Détails:</b> Arrivée en Sardaigne. Prise de voiture puis route vers Palau, env. 30–45 min.</div>`)[0];
+                popup_0dadbc458ef5c8c2abea93fc038d0be1.setContent(html_6b393e4789ff0c31d7af548a5014eb1e);
+            
+        
+
+        marker_bb89fb096d6cf0bcf6fb657e11bd75ae.bindPopup(popup_0dadbc458ef5c8c2abea93fc038d0be1)
+        ;
+
+        
+    
+    
+            marker_bb89fb096d6cf0bcf6fb657e11bd75ae.bindTooltip(
+                `<div>
+                     22/07 – Santa Teresa Gallura
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bb89fb096d6cf0bcf6fb657e11bd75ae.setIcon(icon_3cf6f3cb160756761cc3c2f5b0c1cb67);
+            
+    
+            var marker_f7008b51cacecc28912cf93d1a711639 = L.marker(
+                [41.1795, 9.3846],
+                {
+}
+            ).addTo(map_ae084a2a0e29b0aae954f59da8bf9718);
+        
+    
+            var icon_a714dcebf2faa7f7a8a55aca08563c3f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f081b69f6576fed546e7fa73b2db90d0 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_89c13693cffb3ed1d2c76618950fd8aa = $(`<div id="html_89c13693cffb3ed1d2c76618950fd8aa" style="width: 100.0%; height: 100.0%;"><b>Palau / La Maddalena</b><br><b>Rôle:</b> Hébergement Sardaigne 1<br><b>Date:</b> 23–27/07<br><b>Détails:</b> 5 jours effectifs. Base plages: La Maddalena, Caprera, Costa Smeralda, excursions bateau.</div>`)[0];
+                popup_f081b69f6576fed546e7fa73b2db90d0.setContent(html_89c13693cffb3ed1d2c76618950fd8aa);
+            
+        
+
+        marker_f7008b51cacecc28912cf93d1a711639.bindPopup(popup_f081b69f6576fed546e7fa73b2db90d0)
+        ;
+
+        
+    
+    
+            marker_f7008b51cacecc28912cf93d1a711639.bindTooltip(
+                `<div>
+                     23–27/07 – Palau / La Maddalena
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f7008b51cacecc28912cf93d1a711639.setIcon(icon_a714dcebf2faa7f7a8a55aca08563c3f);
+            
+    
+            var marker_d604b4adb261042019fcc59738824567 = L.marker(
+                [39.2238, 9.1217],
+                {
+}
+            ).addTo(map_ae084a2a0e29b0aae954f59da8bf9718);
+        
+    
+            var icon_480034bd13e571fd8fd5d32e7b557ca5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5174fd87e2b6b0a67f4b3aecc6c9f561 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_f86af1cf1d36b448a038d37cb077ec41 = $(`<div id="html_f86af1cf1d36b448a038d37cb077ec41" style="width: 100.0%; height: 100.0%;"><b>Cagliari / Poetto</b><br><b>Rôle:</b> Hébergement Sardaigne 2<br><b>Date:</b> 28–29/07<br><b>Détails:</b> 2 jours effectifs. Base pratique avant ferry: Cagliari ou plage du Poetto. Route Palau→Cagliari env. 3h45–4h30.</div>`)[0];
+                popup_5174fd87e2b6b0a67f4b3aecc6c9f561.setContent(html_f86af1cf1d36b448a038d37cb077ec41);
+            
+        
+
+        marker_d604b4adb261042019fcc59738824567.bindPopup(popup_5174fd87e2b6b0a67f4b3aecc6c9f561)
+        ;
+
+        
+    
+    
+            marker_d604b4adb261042019fcc59738824567.bindTooltip(
+                `<div>
+                     28–29/07 – Cagliari / Poetto
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d604b4adb261042019fcc59738824567.setIcon(icon_480034bd13e571fd8fd5d32e7b557ca5);
+            
+    
+            var marker_9499e3410b633cd4142cc7f81abc57e3 = L.marker(
+                [39.2145, 9.1116],
+                {
+}
+            ).addTo(map_ae084a2a0e29b0aae954f59da8bf9718);
+        
+    
+            var icon_92c2ff572e1dd041e1814f53ce7f42f4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_954a7bc469fac8fd08bd12b6d6af94c0 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_b7e896dab029729cfc7163f1b4639e8f = $(`<div id="html_b7e896dab029729cfc7163f1b4639e8f" style="width: 100.0%; height: 100.0%;"><b>Port de Cagliari</b><br><b>Rôle:</b> Départ ferry de nuit<br><b>Date:</b> 30/07<br><b>Détails:</b> Transport Sardaigne → Sicile. Ferry de nuit Cagliari → Palermo, cabine recommandée. Durée env. 12h.</div>`)[0];
+                popup_954a7bc469fac8fd08bd12b6d6af94c0.setContent(html_b7e896dab029729cfc7163f1b4639e8f);
+            
+        
+
+        marker_9499e3410b633cd4142cc7f81abc57e3.bindPopup(popup_954a7bc469fac8fd08bd12b6d6af94c0)
+        ;
+
+        
+    
+    
+            marker_9499e3410b633cd4142cc7f81abc57e3.bindTooltip(
+                `<div>
+                     30/07 – Port de Cagliari
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9499e3410b633cd4142cc7f81abc57e3.setIcon(icon_92c2ff572e1dd041e1814f53ce7f42f4);
+            
+    
+            var marker_7126f4c559896a43055cabdf54ebfdf3 = L.marker(
+                [38.1321, 13.3356],
+                {
+}
+            ).addTo(map_ae084a2a0e29b0aae954f59da8bf9718);
+        
+    
+            var icon_3e5f4798d1818276c92f9b014c400e78 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_51b5a3c579e113f4ee1a7681477177e0 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_0aa18619c6d1ec748b5b1250ea83a231 = $(`<div id="html_0aa18619c6d1ec748b5b1250ea83a231" style="width: 100.0%; height: 100.0%;"><b>Palermo port / Mondello</b><br><b>Rôle:</b> Hébergement Sicile 1<br><b>Date:</b> 31/07–02/08<br><b>Détails:</b> 3 jours effectifs. Base: Palermo centre ou Mondello pour plage. Plages: Mondello, Cefalù en excursion.</div>`)[0];
+                popup_51b5a3c579e113f4ee1a7681477177e0.setContent(html_0aa18619c6d1ec748b5b1250ea83a231);
+            
+        
+
+        marker_7126f4c559896a43055cabdf54ebfdf3.bindPopup(popup_51b5a3c579e113f4ee1a7681477177e0)
+        ;
+
+        
+    
+    
+            marker_7126f4c559896a43055cabdf54ebfdf3.bindTooltip(
+                `<div>
+                     31/07–02/08 – Palermo port / Mondello
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7126f4c559896a43055cabdf54ebfdf3.setIcon(icon_3e5f4798d1818276c92f9b014c400e78);
+            
+    
+            var marker_055b9e2fe1e09a09ae80e7045ae68c31 = L.marker(
+                [37.0646, 15.2907],
+                {
+}
+            ).addTo(map_ae084a2a0e29b0aae954f59da8bf9718);
+        
+    
+            var icon_f7714a55fa78470f4dddf36a6c0e552b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_35766c17d07eb83bf04f96720ceba332 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_6358ba494d8f6370185cb90b28ee5ace = $(`<div id="html_6358ba494d8f6370185cb90b28ee5ace" style="width: 100.0%; height: 100.0%;"><b>Siracusa / Ortigia</b><br><b>Rôle:</b> Hébergement Sicile 2<br><b>Date:</b> 03–06/08<br><b>Détails:</b> 4 jours effectifs. Base: Ortigia/Siracusa. Plages: Fontane Bianche, Arenella; Noto; proche de Pozzallo.</div>`)[0];
+                popup_35766c17d07eb83bf04f96720ceba332.setContent(html_6358ba494d8f6370185cb90b28ee5ace);
+            
+        
+
+        marker_055b9e2fe1e09a09ae80e7045ae68c31.bindPopup(popup_35766c17d07eb83bf04f96720ceba332)
+        ;
+
+        
+    
+    
+            marker_055b9e2fe1e09a09ae80e7045ae68c31.bindTooltip(
+                `<div>
+                     03–06/08 – Siracusa / Ortigia
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_055b9e2fe1e09a09ae80e7045ae68c31.setIcon(icon_f7714a55fa78470f4dddf36a6c0e552b);
+            
+    
+            var marker_b8c0b7da5b2b89231a4fcbfb3a4faa7a = L.marker(
+                [36.7286, 14.8499],
+                {
+}
+            ).addTo(map_ae084a2a0e29b0aae954f59da8bf9718);
+        
+    
+            var icon_4d40e9adbc9dc6e90b32f326b6399a56 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkpurple",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6a849de24748fc2e341d3ce60e17c7af = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_36f0f8bee1f5073362532a454583aa2b = $(`<div id="html_36f0f8bee1f5073362532a454583aa2b" style="width: 100.0%; height: 100.0%;"><b>Pozzallo port</b><br><b>Rôle:</b> Départ Sicile<br><b>Date:</b> 07/08<br><b>Détails:</b> Transport Sicile → Malte. Ferry Pozzallo → Valletta, env. 1h45. Restitution voiture en Sicile avant départ.</div>`)[0];
+                popup_6a849de24748fc2e341d3ce60e17c7af.setContent(html_36f0f8bee1f5073362532a454583aa2b);
+            
+        
+
+        marker_b8c0b7da5b2b89231a4fcbfb3a4faa7a.bindPopup(popup_6a849de24748fc2e341d3ce60e17c7af)
+        ;
+
+        
+    
+    
+            marker_b8c0b7da5b2b89231a4fcbfb3a4faa7a.bindTooltip(
+                `<div>
+                     07/08 – Pozzallo port
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b8c0b7da5b2b89231a4fcbfb3a4faa7a.setIcon(icon_4d40e9adbc9dc6e90b32f326b6399a56);
+            
+    
+            var marker_4ba53c94d73b7a33435c5851f5d8e1b5 = L.marker(
+                [35.8997, 14.5146],
+                {
+}
+            ).addTo(map_ae084a2a0e29b0aae954f59da8bf9718);
+        
+    
+            var icon_0a39e82ce9f4034ed6d787dacc9a6264 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d1f7a37ec472771c9a5d86b052c6a755 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_b33f6a23cf42f35f8b22662bd5a74384 = $(`<div id="html_b33f6a23cf42f35f8b22662bd5a74384" style="width: 100.0%; height: 100.0%;"><b>Valletta Grand Harbour</b><br><b>Rôle:</b> Arrivée Malte<br><b>Date:</b> 07/08<br><b>Détails:</b> Arrivée à Malte. Transfert vers Sliema / St Julian's, 20–35 min selon trafic.</div>`)[0];
+                popup_d1f7a37ec472771c9a5d86b052c6a755.setContent(html_b33f6a23cf42f35f8b22662bd5a74384);
+            
+        
+
+        marker_4ba53c94d73b7a33435c5851f5d8e1b5.bindPopup(popup_d1f7a37ec472771c9a5d86b052c6a755)
+        ;
+
+        
+    
+    
+            marker_4ba53c94d73b7a33435c5851f5d8e1b5.bindTooltip(
+                `<div>
+                     07/08 – Valletta Grand Harbour
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4ba53c94d73b7a33435c5851f5d8e1b5.setIcon(icon_0a39e82ce9f4034ed6d787dacc9a6264);
+            
+    
+            var marker_3808ec4981f8d81444101a666c77bed0 = L.marker(
+                [35.9146, 14.501],
+                {
+}
+            ).addTo(map_ae084a2a0e29b0aae954f59da8bf9718);
+        
+    
+            var icon_c46c6533acefbd2d9f6b5bc8125e96f4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_40906390c64935e3a8b799e89fe1956b = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_6810d09955bba56cdb844efe3bf2e02d = $(`<div id="html_6810d09955bba56cdb844efe3bf2e02d" style="width: 100.0%; height: 100.0%;"><b>Sliema / St Julian's</b><br><b>Rôle:</b> Hébergement Malte<br><b>Date:</b> 08–14/08<br><b>Détails:</b> 7 jours effectifs. Base unique, pratique pour hôtels avec piscine, beach clubs, ferries locaux, excursions Gozo/Comino.</div>`)[0];
+                popup_40906390c64935e3a8b799e89fe1956b.setContent(html_6810d09955bba56cdb844efe3bf2e02d);
+            
+        
+
+        marker_3808ec4981f8d81444101a666c77bed0.bindPopup(popup_40906390c64935e3a8b799e89fe1956b)
+        ;
+
+        
+    
+    
+            marker_3808ec4981f8d81444101a666c77bed0.bindTooltip(
+                `<div>
+                     08–14/08 – Sliema / St Julian's
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3808ec4981f8d81444101a666c77bed0.setIcon(icon_c46c6533acefbd2d9f6b5bc8125e96f4);
+            
+    
+            var marker_b3424ab91f1aa9da5cdeed8687102def = L.marker(
+                [35.8575, 14.4775],
+                {
+}
+            ).addTo(map_ae084a2a0e29b0aae954f59da8bf9718);
+        
+    
+            var icon_88a82161064ecb62a3263fd7491b632f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_61735f7f77d22ca3edc688681f2bff4c = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_531c63b60ce2031e6a107f6fa059bf9a = $(`<div id="html_531c63b60ce2031e6a107f6fa059bf9a" style="width: 100.0%; height: 100.0%;"><b>Malta International Airport</b><br><b>Rôle:</b> Retour<br><b>Date:</b> 15/08<br><b>Détails:</b> Retour avion vers Paris ou Marseille.</div>`)[0];
+                popup_61735f7f77d22ca3edc688681f2bff4c.setContent(html_531c63b60ce2031e6a107f6fa059bf9a);
+            
+        
+
+        marker_b3424ab91f1aa9da5cdeed8687102def.bindPopup(popup_61735f7f77d22ca3edc688681f2bff4c)
+        ;
+
+        
+    
+    
+            marker_b3424ab91f1aa9da5cdeed8687102def.bindTooltip(
+                `<div>
+                     15/08 – Malta International Airport
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b3424ab91f1aa9da5cdeed8687102def.setIcon(icon_88a82161064ecb62a3263fd7491b632f);
+            
+    
+            var poly_line_01a075ad1c7b1c53cf2c845c540ef6d5 = L.polyline(
+                [[48.8443, 2.373], [43.2965, 5.3698], [43.3428, 5.3363], [41.9189, 8.7386], [41.5914, 9.2795], [41.3865, 9.1595], [41.242, 9.1887], [41.1795, 9.3846], [39.2238, 9.1217], [39.2145, 9.1116], [38.1321, 13.3356], [37.0646, 15.2907], [36.7286, 14.8499], [35.8997, 14.5146], [35.9146, 14.501], [35.8575, 14.4775]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ae084a2a0e29b0aae954f59da8bf9718);
+        
+    
+            ant_path_65b7f0e42a096add58217ff0fc344a3e = L.polyline.antPath(
+              [[48.8443, 2.373], [43.2965, 5.3698], [43.3428, 5.3363], [41.9189, 8.7386], [41.5914, 9.2795], [41.3865, 9.1595], [41.242, 9.1887], [41.1795, 9.3846], [39.2238, 9.1217], [39.2145, 9.1116], [38.1321, 13.3356], [37.0646, 15.2907], [36.7286, 14.8499], [35.8997, 14.5146], [35.9146, 14.501], [35.8575, 14.4775]],
+              {
+  "stroke": true,
+  "color": "blue",
+  "weight": 4,
+  "opacity": 0.5,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": [
+10,
+20,
+],
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "smoothFactor": 1.0,
+  "noClip": false,
+  "paused": false,
+  "reverse": false,
+  "hardwareAcceleration": false,
+  "delay": 900,
+  "pulseColor": "white",
+}
+        ).addTo(map_ae084a2a0e29b0aae954f59da8bf9718);
+        
+</script>
+</html>
